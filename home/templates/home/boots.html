@@ -1,0 +1,50 @@
+{% extends "home/base.html" %}
+{% block title %}Boots | Sanitisation Technique{% endblock %}
+{% load static %}
+ {% block content %}
+<div class="container">
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+    </div>
+    <button class="button is-rounded" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button>
+
+        <!-- Developers -->
+        <div class="row columns">
+            <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{% static 'boots.jpg' %}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">Gum Boots</p>
+                                <p><span class="title is-6"><a href="#">Source</a></span></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content">
+                            <strong>Alcohol-Based Rub</strong><br>
+
+                           Equipment Needed: Alcohol-Based  Sanitizer<br>
+                            Steps: Take a small amount, apply to gloved hands, rub hands to the gumboots until dry (typically 20-30 seconds)
+            and wash your boots with detergent.
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        <!-- End Developers -->
+
+        <!-- Staff -->
+        <!-- End Staff -->
+    </div>
+</div>
+{% endblock content %}

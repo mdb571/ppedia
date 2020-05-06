@@ -1,0 +1,30 @@
+{% extends "home/base.html" %}
+{% block title %}PPEdia | The wikipedia for PPEs{% endblock %}
+{% load static %}
+ {% block content %}
+ <div class="hero-body">
+    <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+            <div class="column is-5">
+                <figure class="image is-4by4">
+                    <img src="{% static '/ppe.jpg' %}" alt="Description">
+                </figure>
+            </div>
+            <div class="column is-6 is-offset-1">
+                <h1 class="title is-2">
+                    For today's warriors
+                </h1>
+                <h2 class="subtitle is-4">
+                     Strategies for sanitizing personal protective equipment in the COVID-19 pandemic..
+                </h2>
+                <br>
+                <p class="has-text-centered">
+                    <a class="button is-primary is-rounded" href="{% url 'menu' %}">
+                        Get Started
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

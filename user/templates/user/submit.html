@@ -1,0 +1,59 @@
+{% extends "home/base.html" %}
+{% block title %}Submit your technique | Sanitisation Technique{% endblock %}
+{% load static %}
+{% block content %}
+<div class="hero-body">
+    <div class="container has-text-centered">
+
+        <form class="myform columns is-vcentered">
+            <div class="column is-5 has-text-left">
+                <h1 style="font-size: xx-large;"><strong> Welcome User</strong> </h1>
+                <figure class="image is-4by4">
+                    <img src="{% static 'tq.jpg' %}" alt="Description">
+                </figure>
+            </div>
+            <div class="column is-6 is-offset-1 has-text-left">
+                <div class="field">
+                    <label class="label">Name:</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Category:</label>
+                    <select id="Category" name="Category">
+                        <option value="Gloves">Gloves</option>
+                        <option value="Mask">Mask</option>
+                        <option value="Boot">Boot</option>
+                        <option value="Googles">Goggles</option>
+                        <option value="Gown">Gown</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="label">Source:</label>
+                    <div class="control">
+                        <input class="input is-medium" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Method:</label>
+                    <div class="control">
+                        <textarea class="textarea is-medium"></textarea>
+                    </div>
+                </div>
+                <div class="control">
+                    <button type="submit"
+                        onclick="alert('Thank you for your contribution.Your contribution means a lot to us..:)'); myFunction()"
+                        class="button is-link is-fullwidth has-text-weight-medium is-medium">Submit</button>
+                </div>
+        </form>
+
+    </div>
+</div>
+</div>
+<script>
+    function myFunction() {
+        document.getElementById("myform").reset();
+    }
+</script>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+{% block title %}Donate to CMDRF{% endblock %}
+{% load static %}
+ {% block content %}
+ <div class="hero-body">
+    <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+            <div class="column is-5">
+                <figure class="image is-4by4">
+                    <img src="{% static '/donate.jpg' %}" alt="Description">
+                </figure>
+            </div>
+            <div class="column is-6 is-offset-1">
+                <h1 class="title is-2">
+                    <strong>STAND with Kerala</strong><br>
+                    Chief Minister's Pandemic Relief Fund
+                </h1>
+                <h2 class="subtitle is-4">
+                    Kerala is in a battle against COVID19. The people of the State have shown great courage and tenacity in this fight against the pandemic. The outbreak and the consequent disruption have affected the lives of many. You can help rebuild the affected lives by making contributions to the Chief Minister's Distress Relief Fund (CMDRF). 
+                </h2>
+                <br>
+                <p class="has-text-centered">
+                    <a class="button is-primary is-rounded" href="https://donation.cmdrf.kerala.gov.in/#donation">
+                        Donate
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

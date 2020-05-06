@@ -1,0 +1,74 @@
+{% extends "home/base.html" %}
+{% block title %}Gloves | Sanitisation Technique{% endblock %}
+{% load static %}
+ {% block content %}
+
+<div class="container">
+
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+    </div>
+    <button class="button is-rounded" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button>
+
+        <!-- Developers -->
+        <div class="row columns">
+            <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{% static 'latex.jpg' %}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">Latex Gloves</p>
+                                <p><span class="title is-6"><a href="#">Source</a></span></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content">
+                            <strong>Alcohol-Based Hand Rub</strong><br>
+
+                           Equipment Needed: Alcohol-Based Hand Sanitizer<br>
+                            Steps: Take a small amount, apply to gloved hands, rub hands together until dry (typically 20-30 seconds)
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{% static 'nitrid.jpg' %}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">Nitrile</p>
+                                <p><span class="title is-6"><a href="#">Source</a></span></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content">
+                           <strong>Hibiscrub (Chlorhexidine)</strong><br>
+                            Equipment Needed: Hibiscrub (Chlorhexidine)<br>
+                            Wet gloved hands, 
+                            add a small amount of hibiscrub, wash hands together for 1 minute. Applies to Ansell Medical 'Medi-Grip', Regent 'Biogel D'.
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End Developers -->
+
+        <!-- Staff -->
+        <!-- End Staff -->
+    </div>
+</div>
+{% endblock content %}

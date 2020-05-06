@@ -1,0 +1,32 @@
+{% extends "home/base.html" %}
+{% block title %}Welcome User331{% endblock %}
+{% load static %}
+ {% block content %}
+ <div class="hero-body">
+    <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+            <div class="column is-5 has-text-left">
+                <h1 style="font-size: xx-large;"><strong> Welcome User</strong> </h1>
+                <figure class="image is-4by4">
+                    <img src="{% static 'tq.jpg' %}" alt="Description">
+                </figure>
+            </div>
+            <div class="column is-6 is-offset-1">
+                <h1 class="title is-2">
+                    Got Startegies to Share.?
+                </h1>
+                <br>
+                <h2 class="subtitle is-4">
+                    Share your method of sanitizing PPE components here and we'll verify and publish them 
+                </h2>
+                <br>
+                <p class="has-text-centered">
+                    <a class="button is-primary is-rounded" href="{% url 'submit' %}">
+                        Submit Strategy
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

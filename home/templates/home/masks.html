@@ -1,0 +1,71 @@
+{% extends "home/base.html" %}
+{% block title %}Masks | Sanitisation Technique{% endblock %}
+{% load static %}
+ {% block content %}
+<div class="container">
+    <div id="flow">
+        <span class="flow-1"></span>
+        <span class="flow-2"></span>
+        <span class="flow-3"></span>
+    </div>
+    <button class="button is-rounded" onclick="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i>Go Back</button>
+
+        <!-- Developers -->
+        <div class="row columns">
+            <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{% static 'n95.jpg' %}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">N-95</p>
+                                <p><span class="title is-6"><a href="https://www.sages.org/n-95-re-use-instructions/">Source</a></span></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content">
+                            <strong>Alcohol-Based Hand Rub</strong><br>
+
+                           Dry heating of the mask at 70°C for 30 minutes has been suggested as a method of decontamination which can adequately kill virus and preserve the filter integrity for re-use. Recent tests at the NIH utilizing SARS-CoV-2 specifically indicated that this method can be used for two cycles to kill the virus without compromising fit. Research efforts are ongoing to determine optimal parameters (temperature and duration), and this is not yet recommended by the CDC.
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="column is-one-third">
+                <div class="card large">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="{% static 'surgical.jpg' %}" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4 no-padding">Surgical Mask</p>
+                                <p><span class="title is-6"><a href="#">Source</a></span></p>
+                                
+                            </div>
+                        </div>
+                        <div class="content">
+                           <strong>Don't Reuse</strong><br>
+                            Equipment Needed: Hibiscrub (Chlorhexidine)<br>
+                            Surgical masks may be worn continuously until visibly soiled or moist from respirations. They should be carefully folded so that the outer surface is held inward and against itself to reduce contact with the outer surface during storage. The folded mask can be stored between uses in a clean, sealable paper bag or breathable container.
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End Developers -->
+
+        <!-- Staff -->
+        <!-- End Staff -->
+    </div>
+</div>
+{% endblock content %}

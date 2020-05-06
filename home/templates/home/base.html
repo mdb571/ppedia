@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'icon.jpg'%} " type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Open Sans';
+        }
+        
+        
+        img {
+            padding: 5px;
+            border: none; solid #ccc;
+        }
+        button.is-info.is-outlined  {
+            background-color: transparent;
+             border-color: #52c8cb;
+             color: #52c8cb;
+
+        }
+        button.is-info.is-outlined:hover {
+            background-color: #52c8cb;
+             border-color: #52c8cb;
+             color: #52c8cb;
+        }
+    </style>
+     <script>
+        function goBack() {
+          window.history.back()
+        }
+        </script>
+</head>
+
+<body>
+    <section class="hero is-fullheight is-default is-bold">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <img src="{% static 'bulma.png' %}" alt="PPEdia" height="80px">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li class="is-active"><a href="{% url 'home' %}">Home</a></li>
+                                    <li><a href="{% url 'donate' %}">Donate</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    {% block content %}
+    {% endblock content %}    
+
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <ul>
+                        <li><a>  Made with ♥ for Haccovid</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/bulma.js"></script>
+</body>
+
+</html>
