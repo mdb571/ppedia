@@ -16,3 +16,6 @@ def admin(request):
 
 def donate(request):
     return render(request,'user/donate.html')
+
+def dispose(request):
+    return render(request,'user/disposal.html')

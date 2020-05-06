@@ -31,6 +31,7 @@ urlpatterns = [
     path('profile/',user_view.profile,name='profile'),
     path('submit/',user_view.submit,name='submit'),
     path('donate/',user_view.donate,name='donate'),
+    path('dispose/',user_view.dispose,name='dispose'),
 
     
 ]

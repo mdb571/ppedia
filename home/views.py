@@ -21,4 +21,4 @@ def goggles(request):
     return render(request,'home/goggles.html')
 
 def gowns(request):
-    return render(request,'home/gowns.html')
+    return render(request,'home/gown.html')

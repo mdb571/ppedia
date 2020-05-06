@@ -1,0 +1,51 @@
+{% extends "home/base.html" %}
+{% block title %}PPE Disposal Guidelines{% endblock %}
+{% load static %}
+{% block content %}   
+    <div class="container">
+        <div id="flow">
+            <span class="flow-1"></span>
+            <span class="flow-2"></span>
+            <span class="flow-3"></span>
+        </div>
+        
+            <!-- Developers -->
+            <div class="row columns">
+                <div class="column is-one-third">
+                    <div class="card large">
+                        <div class="card-image">
+                            <figure class="image">
+                                <br>
+				<p class="title is-4 no-padding has-text-centered">Gown</p>
+                                <img src="{% static 'gownppe.jpeg' %}" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    
+                                    <p><span class="title is-6"><a href="#">Source</a></span></p>
+                                    
+                                </div>
+                            </div>
+                            <div class="content">
+                                <strong>DON'T REUSE</strong><br>
+
+                                 Paper and plastic gowns can be reused as long as they are not visibly soiled. Alternatives to paper or plastic gowns include patient gowns, disposable lab coats, and disposable coveralls.
+				 Cloth gowns may be used as well.
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            <!-- End Developers -->
+
+            <!-- Staff -->
+            <!-- End Staff -->
+        </div>
+    </div>
+
+
+{% endblock content %} 
