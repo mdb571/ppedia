@@ -1,1 +1,1 @@
-web: gunicorn base_app.wsgi --log-file -
+web: gunicorn PPEdia.wsgi --log-file -
