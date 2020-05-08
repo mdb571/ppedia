@@ -17,29 +17,51 @@
         body {
             font-family: 'Open Sans';
         }
-        
-        
+
+
         img {
             padding: 5px;
-            border: none; solid #ccc;
+            border: none;
+            solid #ccc;
         }
-        button.is-info.is-outlined  {
+
+        button.is-info.is-outlined {
             background-color: transparent;
-             border-color: #52c8cb;
-             color: #52c8cb;
+            border-color: #52c8cb;
+            color: #52c8cb;
 
         }
+
         button.is-info.is-outlined:hover {
             background-color: #52c8cb;
-             border-color: #52c8cb;
-             color: #52c8cb;
+            border-color: #52c8cb;
+            color: #52c8cb;
         }
     </style>
-     <script>
+    <script>
         function goBack() {
-          window.history.back()
+            window.history.back()
         }
-        </script>
+        var btnContainer = document.getElementsByClassName("is-right");
+
+        // Get all buttons with class="btn" inside the container
+        var btns = btnContainer.getElementsById("btn");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("is-active");
+
+                // If there's no active class
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+
+                // Add the active class to the current/clicked button
+                this.className += " active";
+            });
+        } 
+    </script>
 </head>
 
 <body>
@@ -57,15 +79,15 @@
                             <span></span>
                         </span>
                     </div>
-                    <div id="navbarMenu" class="navbar-menu">
+                    <div id="navbarMenu" class="navbar-menu is-active">
                         <div class="navbar-end">
                             <div class="tabs is-right">
                                 <ul>
-                                    <li class="is-active"><a href="{% url 'home' %}">Home</a></li>
-                                    <li><a href="{% url 'dispose' %}">Dispose</a></li>
-                                    <li><a href="{% url 'donate' %}">Donate</a></li>
-                                    <li><a href="{% url 'login' %}">Login</a></li>
-                                 
+                                    <li id="btn" class="is-active"><a href="{% url 'home' %}">Home</a></li>
+                                    <li id="btn" class=""><a href="{% url 'dispose' %}">Dispose</a></li>
+                                    <li id="btn" class=""><a href="{% url 'donate' %}">Donate</a></li>
+                                    <li id="btn" class=""><a href="{% url 'login' %}">Login</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -73,15 +95,18 @@
                 </div>
             </nav>
         </div>
-    {% block content %}
-    {% endblock content %}    
-        <p><center><strong>These strategies should only be used as extrodinary last-resort method in the event of imminent shortage of PPE kits.
-        </strong></center></p>
+        {% block content %}
+        {% endblock content %}
+        <p>
+            <center><strong>These strategies should only be used as extrodinary last-resort method in the event of
+                    imminent shortage of PPE kits.
+                </strong></center>
+        </p>
         <div class="hero-foot">
             <div class="container">
                 <div class="tabs is-centered">
                     <ul>
-                        <li><a>  Made with ♥ for Haccovid</a></li>
+                        <li><a> Made with ♥ for Haccovid</a></li>
                     </ul>
                 </div>
             </div>
