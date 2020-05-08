@@ -1,1 +1,1 @@
-#The project can be found at https://ppeapp.herokuapp.com/
+Our submission for Haccovid-20
